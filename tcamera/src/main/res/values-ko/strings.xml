@@ -1,0 +1,16 @@
+<resources>
+
+    <!--Common-->
+    <string name="common_confirm">확인</string>
+    <string name="common_complete">완료</string>
+    <string name="common_cancel">취소</string>
+
+    <!-- Popup select photo -->
+    <string name="dialog_photo_title">사진선택</string>
+    <string name="dialog_photo_camera">새로운 사진 촬영</string>
+    <string name="dialog_photo_gallery">앨범에서 선택</string>
+    <string name="dialog_photo_default">기본 이미지 사용</string>
+
+    <string name="toast_fail_photo_select">사진 선택에 실패했습니다</string>
+
+</resources>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tedkim.android.tcamera">
+    package="com.tedkim.android.sample">
+
+    <!-- 갤러리를 읽기 위한 권한 * -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 이미지 크롭 후 임시로 저장하기 위한 권한 *-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"

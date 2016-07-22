@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="TPermission-1.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.tedkim/TPermission/1.0.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.tedkim/TPermission/1.0.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tedkim/TPermission/1.0.0/29e851d96e672da54e6f890c8acef08cd66310dc/TPermission-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="app_name">TCamera</string>
+    <string name="camera_action">com.tedkim.android.camera</string>
+
+    <!--Common-->
+    <string name="common_confirm">Confirm</string>
+    <string name="common_complete">Complete</string>
+    <string name="common_cancel">Cancel</string>
+
+    <!-- Popup select photo -->
+    <string name="dialog_photo_title">Photo Select</string>
+    <string name="dialog_photo_camera">Shoot new photo</string>
+    <string name="dialog_photo_gallery">Choose from the gallery</string>
+    <string name="dialog_photo_default">Use the default image</string>
+
+    <string name="toast_fail_photo_select">It failed to select a photo</string>
+
+</resources>

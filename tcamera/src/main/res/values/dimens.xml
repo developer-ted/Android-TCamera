@@ -1,0 +1,19 @@
+<resources>
+
+    <dimen name="common_margin">16dp</dimen>
+    <dimen name="common_margin_small">10dp</dimen>
+    <dimen name="common_margin_micro">5dp</dimen>
+    <dimen name="common_row_height">56dp</dimen>
+    <dimen name="common_progress_bar_width">50dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="text_micro">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_super_large">20sp</dimen>
+
+    <!--Dialog-->
+    <dimen name="dialog_btn_width">50dp</dimen>
+
+</resources>
