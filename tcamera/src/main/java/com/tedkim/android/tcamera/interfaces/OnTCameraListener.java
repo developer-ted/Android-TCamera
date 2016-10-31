@@ -8,10 +8,11 @@ import java.io.File;
  * TCamera Listener
  * Created by Ted
  */
-public interface OnTCameraListener {
+public class OnTCameraListener {
 
-    void onSuccess(String filePath, Bitmap bitmap, File file);
-    void onDefaultImage();
-    void onFail();
+    public void onSuccess(String filePath){}
+    public void onSuccess(String filePath, Bitmap bitmap, File file){}
+    public void onDefaultImage(){}
+    public void onFail(){}
 
 }

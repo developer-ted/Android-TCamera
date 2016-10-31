@@ -23,7 +23,9 @@ public class TCamera {
     public static final String SUCCESS = "SUCCESS";
     public static final String SUCCESS_TYPE = "SUCCESS_TYPE";
     public static final String IMAGE_URI = "IMAGE_URI";
-    public static final String SUCCESS_TYPE_SELECT_IMAGE = "SUCCESS_TYPE_SELECT_IMAGE";
+    public static final String VIDEO_URI = "VIDEO_URI";
+    public static final String SUCCESS_TYPE_SELECT_PHOTO = "SUCCESS_TYPE_SELECT_PHOTO";
+    public static final String SUCCESS_TYPE_SELECT_VIDEO = "SUCCESS_TYPE_SELECT_VIDEO";
     public static final String SUCCESS_TYPE_DEFAULT_IMAGE = "SUCCESS_TYPE_DEFAULT_IMAGE";
 
     public static TCamera mInstance;
@@ -238,7 +240,14 @@ public class TCamera {
 
             if (mInstance != null)
                 mInstance = null;
-        } else {
+        }
+        else if (intent.getStringExtra(SUCCESS_TYPE).equals(SUCCESS_TYPE_SELECT_VIDEO)) {
+            String uri = FileUtils.getPathFromURI(mContext, Uri.parse(intent.getStringExtra(VIDEO_URI)));
+
+            if (mOnTCameraListener != null)
+                mOnTCameraListener.onSuccess(uri);
+        }
+        else {
             Bundle extras = intent.getExtras();
             Bitmap bitmap = null;
             File mFile;

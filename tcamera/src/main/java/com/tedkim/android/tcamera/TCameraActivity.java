@@ -38,7 +38,8 @@ public class TCameraActivity extends AppCompatActivity {
     public static final String DIALOG_DEFAULT_IMAGE_TEXT = "DIALOG_DEFAULT_IMAGE_TEXT";
 
     private static final int PATH_CAMERA = 8242;
-    private static final int PATH_GALLERY = 8123;
+    private static final int PATH_PHOTO_GALLERY = 8693;
+    private static final int PATH_VIDEO_GALLERY = 8123;
     private static final int PATH_CROP_IMAGE = 8394;
 
     private CameraReceiver mCameraReceiver;
@@ -129,7 +130,7 @@ public class TCameraActivity extends AppCompatActivity {
                         break;
 
                     case SelectPhotoDialog.SELECT_GALLERY:
-                        intentGallery();
+                        intentPhotoGallery();
                         break;
 
                     case SelectPhotoDialog.SELECT_DEFAULT_IMAGE:
@@ -169,7 +170,7 @@ public class TCameraActivity extends AppCompatActivity {
                 }
                 break;
 
-            case PATH_GALLERY:
+            case PATH_PHOTO_GALLERY:
                 if (data == null) {
                     Toast.makeText(TCameraActivity.this, mToastFailGallery, Toast.LENGTH_SHORT).show();
                     showSelectList();
@@ -187,6 +188,22 @@ public class TCameraActivity extends AppCompatActivity {
                 intentCropActivity();
                 break;
 
+            case PATH_VIDEO_GALLERY:
+                if (data == null) {
+                    Toast.makeText(TCameraActivity.this, mToastFailGallery, Toast.LENGTH_SHORT).show();
+                    showSelectList();
+                    return;
+                }
+
+                Uri uri = data.getData();
+                Intent videoIntent = new Intent();
+                videoIntent.setAction(getString(R.string.camera_action));
+                videoIntent.putExtra(TCamera.SUCCESS, true);
+                videoIntent.putExtra(TCamera.SUCCESS_TYPE, TCamera.SUCCESS_TYPE_SELECT_VIDEO);
+                videoIntent.putExtra(TCamera.VIDEO_URI, uri.toString());
+                finishCameraActivity(videoIntent);
+                break;
+
             case PATH_CROP_IMAGE:
                 if (data == null) {
                     Toast.makeText(TCameraActivity.this, mToastFailCropImage, Toast.LENGTH_SHORT).show();
@@ -196,7 +213,7 @@ public class TCameraActivity extends AppCompatActivity {
 
                 data.setAction(getString(R.string.camera_action));
                 data.putExtra(TCamera.SUCCESS, true);
-                data.putExtra(TCamera.SUCCESS_TYPE, TCamera.SUCCESS_TYPE_SELECT_IMAGE);
+                data.putExtra(TCamera.SUCCESS_TYPE, TCamera.SUCCESS_TYPE_SELECT_PHOTO);
                 data.putExtra(TCamera.IMAGE_URI, mImageCaptureUri.toString());
                 finishCameraActivity(data);
                 break;
@@ -231,12 +248,21 @@ public class TCameraActivity extends AppCompatActivity {
     }
 
     /**
-     * intent Gallery
+     * Intent photo gallery
      */
-    private void intentGallery() {
+    private void intentPhotoGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK);
-        intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
-        startActivityForResult(intent, PATH_GALLERY);
+        intent.setType("image/*");
+        startActivityForResult(intent, PATH_PHOTO_GALLERY);
+    }
+
+    /**
+     * Intent video gallery
+     */
+    private void intentVideoGallery() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("video/*");
+        startActivityForResult(intent, PATH_VIDEO_GALLERY);
     }
 
     private void failCamera() {
