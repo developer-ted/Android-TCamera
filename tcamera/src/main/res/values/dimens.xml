@@ -1,6 +1,7 @@
 <resources>
 
     <dimen name="common_margin">16dp</dimen>
+    <dimen name="common_margin_medium">24dp</dimen>
     <dimen name="common_margin_small">10dp</dimen>
     <dimen name="common_margin_micro">5dp</dimen>
     <dimen name="common_row_height">56dp</dimen>
