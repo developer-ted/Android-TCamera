@@ -1,19 +1,37 @@
 <resources>
 
-    <string name="app_name">TCamera</string>
-    <string name="camera_action">com.tedkim.android.camera</string>
+    <string name="module_name" translatable="false">TCamera</string>
+    <string name="camera_action" translatable="false">com.tedkim.android.camera</string>
 
     <!--Common-->
-    <string name="common_confirm">Confirm</string>
-    <string name="common_complete">Complete</string>
-    <string name="common_cancel">Cancel</string>
+    <string name="common_confirm" translatable="false">Confirm</string>
+    <string name="common_complete" translatable="false">Complete</string>
+    <string name="common_cancel" translatable="false">Cancel</string>
 
     <!-- Popup select photo -->
-    <string name="dialog_photo_title">Photo Select</string>
-    <string name="dialog_photo_camera">Shoot new photo</string>
-    <string name="dialog_photo_gallery">Choose from the gallery</string>
-    <string name="dialog_photo_default">Use the default image</string>
+    <string name="dialog_photo_title" translatable="false">Photo Select</string>
+    <string name="dialog_photo_camera" translatable="false">Shoot new photo</string>
+    <string name="dialog_photo_gallery" translatable="false">Choose from the gallery</string>
+    <string name="dialog_photo_default" translatable="false">Use the default image</string>
 
-    <string name="toast_fail_photo_select">It failed to select a photo</string>
+    <string name="toast_fail_photo_select" translatable="false">It failed to select a photo</string>
 
 </resources>
+
+
+<!--<resources>-->
+
+<!--&lt;!&ndash;Common&ndash;&gt;-->
+<!--<string name="common_confirm" translatable="false">확인</string>-->
+<!--<string name="common_complete" translatable="false">완료</string>-->
+<!--<string name="common_cancel" translatable="false">취소</string>-->
+
+<!--&lt;!&ndash; Popup select photo &ndash;&gt;-->
+<!--<string name="dialog_photo_title" translatable="false">사진선택</string>-->
+<!--<string name="dialog_photo_camera" translatable="false">새로운 사진 촬영</string>-->
+<!--<string name="dialog_photo_gallery" translatable="false">앨범에서 선택</string>-->
+<!--<string name="dialog_photo_default" translatable="false">기본 이미지 사용</string>-->
+
+<!--<string name="toast_fail_photo_select" translatable="false">사진 선택에 실패했습니다</string>-->
+
+<!--</resources>-->
